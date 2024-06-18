@@ -1,0 +1,94 @@
+/* Genel sayfa düzeni */
+body {
+    background-color: #000; /* Arka planı siyah renk */
+    color: #00ff2a; /* Yazı rengi beyaz */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Başlık stillemesi */
+header {
+    background-color: #333;
+    color: #d67b7b;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    color: #26ff00bd; /* Kırmızı renk */
+    margin-bottom: 9px;
+}
+
+/* Navigasyon menüsü */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #26ff00;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff000000; /* Kırmızı renk */
+}
+
+/* İçerik bölümü */
+#icerik {
+    padding: 20px;
+    text-align: center;
+    width: 110%;
+}
+
+/* Dizi konteyneri */
+.dizi-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px; /* Dizi arasındaki boşluk */
+}
+
+/* Dizi öğesi */
+.dizi a {
+    display: block;
+    width: 1250px; /* Görüntü genişliği */
+    margin: 25px;
+}
+
+.dizi img {
+    width: 100%; /* Görüntü genişliği */
+    border-radius: 50px; /* Köşeleri yuvarlaştırma */
+    transition: transform 0.2s, box-shadow 0.3s; /* Dönüşüm ve gölge efekti süresi ve türü */
+}
+
+.dizi img:hover {
+    transform: scale(1.05); /* Hover efekti: 1.05 kat büyütme */
+    box-shadow: 0 8px 16px rgba(34, 255, 0, 0.396); /* Beyaz gölgelendirme efekti */
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .dizi a {
+        width: calc(50% - 20px); /* Mobilde iki sütun halinde gösterim */
+    }
+}
+
+@media (max-width: 480px) {
+    .dizi a {
+        width: 100%; /* Mobilde tek sütun halinde gösterim */
+    }
+}
