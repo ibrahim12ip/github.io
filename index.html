@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Chat App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="video-container">
-            <video id="localVideo" autoplay muted></video>
-            <video id="remoteVideo" autoplay></video>
-        </div>
-        <div class="controls">
-            <button id="startButton">Sohbet Et</button>
-            <button id="endButton">Sohbeti Durdur</button>
-        </div>
+  <div class="container">
+    <div class="sidebar">
+      <h1>WhatsApp</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Search or start a new chat">
+      </div>
+      <ul class="chat-list">
+        <li class="chat-item">
+          <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+          <div class="info">
+            <span class="name">Annem</span>
+            <span class="last-message">https://ibrahim12ip.github.io/github...</span>
+            <span class="timestamp">01:07</span>
+          </div>
+        </li>
+        <li class="chat-item">
+          <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+          <div class="info">
+            <span class="name">شیرین</span>
+            <span class="last-message">الو /</span>
+            <span class="timestamp">22.06.2024</span>
+          </div>
+        </li>
+        <!-- More chat items -->
+      </ul>
     </div>
+    <div class="main">
+      <div class="chat-window" id="chat-window">
+        <!-- Messages will be dynamically added here -->
+      </div>
+      <div class="message-input">
+        <input type="text" id="message-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
