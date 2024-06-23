@@ -4,70 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Chat App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #282c34;
-            color: white;
-        }
-
-        .video-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 80%;
-            height: 80%;
-            border: 2px solid #61dafb;
-            border-radius: 10px;
-            background-color: #20232a;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        video {
-            width: 45%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: black;
-        }
-
-        .controls {
-            position: absolute;
-            bottom: 20px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-size: 16px;
-            background-color: #61dafb;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #21a1f1;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="video-container">
-        <video id="localVideo" autoplay muted></video>
-        <video id="remoteVideo" autoplay></video>
-    </div>
-    <div class="controls">
-        <button onclick="startCall()">Start Call</button>
-        <button onclick="nextUser()">Next</button>
-        <button onclick="endCall()">End Call</button>
+    <div class="container">
+        <div class="video-container">
+            <video id="localVideo" autoplay muted></video>
+            <video id="remoteVideo" autoplay></video>
+        </div>
+        <div class="controls">
+            <button id="startButton">Sohbet Et</button>
+            <button id="endButton">Sohbeti Durdur</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
